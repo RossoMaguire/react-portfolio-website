@@ -32,7 +32,7 @@ const Projects = () => {
 
   useEffect(() => {
     setList(projects.slice(0, LIMIT));
-  }, projects);
+  }, projects.slice(0, LIMIT));
 
   const loadMoreProjects = () => {
     // setMoreProjects((value) => !value);
