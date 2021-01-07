@@ -1,16 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
+import { concat } from 'lodash';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
 const Projects = () => {
+  const LIMIT = 4;
+
   const { projects } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [moreProjects, setMoreProjects] = useState(true);
+  const [list, setList] = useState(projects.slice(0, LIMIT));
+  const [index, setIndex] = useState(LIMIT);
+
+  const arrow = moreProjects ? 'fa fa-arrow-right' : 'fa fa-arrow-down';
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -22,13 +30,39 @@ const Projects = () => {
     }
   }, []);
 
+  useEffect(() => {
+    setList(projects.slice(0, LIMIT));
+  }, projects);
+
+  const loadMoreProjects = () => {
+    // setMoreProjects((value) => !value);
+    const newIndex = index + LIMIT;
+    const newShowMore = newIndex < projects.length - 1;
+    const newList = concat(list, projects.slice(index, newIndex));
+    setIndex(newIndex);
+    setList(newList);
+    setMoreProjects(newShowMore);
+  };
+
   return (
     <section id="projects">
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
-          {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+          {list.map((project) => {
+            const {
+              title,
+              label,
+              label2,
+              info,
+              info2,
+              url,
+              url2,
+              repo,
+              img,
+              id,
+              languages,
+            } = project;
 
             return (
               <Row key={id}>
@@ -42,32 +76,54 @@ const Projects = () => {
                   >
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
-                      <div>
-                        <p>
-                          {info ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                        </p>
+                      <div className="project-wrapper__text-info">
+                        <p>{info}</p>
                         <p className="mb-4">{info2 || ''}</p>
+                        <p style={{ float: 'right' }}>{languages}</p>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
-
-                      {repo && (
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
-                          href={repo}
-                        >
-                          Source Code
-                        </a>
-                      )}
+                      <div className="project-wrapper__text-buttons">
+                        {title === 'Social Media Management' ? (
+                          <>
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="cta-btn cta-btn--hero"
+                              href={url || '#!'}
+                            >
+                              {label}
+                            </a>
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="cta-btn cta-btn--hero social-project-btn"
+                              href={url2 || '#!'}
+                            >
+                              {label2}
+                            </a>
+                          </>
+                        ) : (
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="cta-btn cta-btn--hero"
+                            href={url || '#!'}
+                          >
+                            {label}
+                          </a>
+                        )}
+                      </div>
+                      <div className="project-wrapper__text-buttons">
+                        {repo && (
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="cta-btn text-color-main"
+                            href={repo}
+                          >
+                            {label2}
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </Fade>
                 </Col>
@@ -110,6 +166,17 @@ const Projects = () => {
               </Row>
             );
           })}
+          {moreProjects && (
+            <Row>
+              <span
+                onClick={loadMoreProjects}
+                className="cta-btn text-color-main more-projects-btn"
+                aria-hidden="true"
+              >
+                View more projects <i className={arrow} />
+              </span>
+            </Row>
+          )}
         </div>
       </Container>
     </section>

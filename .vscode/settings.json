@@ -1,0 +1,7 @@
+{
+  "terminal.integrated.automationShell.osx": "",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"]
+}

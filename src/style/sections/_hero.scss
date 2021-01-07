@@ -1,10 +1,7 @@
 #hero {
-  min-height: 100vh;
-  height: 100vh;
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: $white-color;
   font-weight: 400;
   color: $dark-blue-text;
   padding: 0rem 5.6rem;
@@ -13,13 +10,25 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: -99999999;
 
-  // If you want to set a background image on the hero section, uncomment these with yout custom image
+  /* If you want to set a background image on the hero section, uncomment these with yout custom image
 
-  /* background: url("/src/assets/[your-image].png");
+  background: url("https://images.unsplash.com/photo-1495465798138-718f86d1a4bc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80");
   background-position: center;
-  background-size: cover; */
+  background-size: cover;  
+
+  &:before { 
+    content: "";
+    background-image: url('https://images.unsplash.com/photo-1495465798138-718f86d1a4bc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+  } */
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
@@ -28,7 +37,6 @@
   .hero-title {
     font-size: 5.6rem;
     font-weight: 700;
-    margin-bottom: 3.2rem;
     text-align: left;
 
     @include respond(tab-land) {
@@ -61,5 +69,47 @@
         font-size: 2rem;
       }
     }
+
   }
 }
+
+.home-hero {
+  background: $white-color;
+  min-height: 100vh;
+  height: 100vh;
+
+  .hero-title {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.services-hero {
+  height: 445px;
+  min-height: 445px;
+
+  @include respond(phone) {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  @include respond(tab-port) {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .hero-title {
+    margin-bottom: 8.2rem;
+
+    @include respond(phone) {
+      margin-top: 20%;
+      margin-bottom: 0px!important;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 16%;
+    }
+
+  }
+}
+
+

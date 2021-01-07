@@ -14,6 +14,10 @@
     -webkit-clip-path: none;
   }
 
+  @include respond(phone) {
+    padding-bottom:0px;
+  }
+
   .contact-wrapper {
     margin-top: 3.2rem;
     padding: 0 2rem;

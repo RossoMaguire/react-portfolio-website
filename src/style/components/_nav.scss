@@ -1,0 +1,36 @@
+#navigation-bar {
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    @include respond(phone) {
+      background-color: #333333;
+    }
+
+}
+
+.nav-item {
+  padding:10px;
+
+  span {
+    cursor: pointer;
+    padding-left:0;
+    padding-right:0;
+  }
+}
+
+@include respond(tab-port) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+
+
+@include respond(phone) {
+  .navbar-nav {
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  }
+}

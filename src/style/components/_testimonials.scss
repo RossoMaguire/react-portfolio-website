@@ -1,0 +1,74 @@
+.carousel-root {
+margin-top: 10rem;
+
+@include respond(phone) {
+    padding-bottom: 2rem;
+    margin-top: 8rem;
+}
+
+.control-arrow {
+    color:white!important;
+    opacity:1!important;
+
+    &:hover {
+        background: none!important;
+    }
+
+}
+
+.control-next {
+
+    &:before {
+        font-family: 'FontAwesome';
+        font-weight: 900; /* insert this definition */
+        content: "\f101"!important;
+        font-style: normal;
+        font-size:40px;
+        border:none!important; 
+    }
+
+}
+
+.control-prev {
+
+    &:before {
+        font-family: 'FontAwesome';
+        font-weight: 900; /* insert this definition */
+        content: "\f100"!important;
+        font-style: normal;
+        font-size:40px;
+        border:none!important; 
+    }
+}
+
+.control-dots, .carousel-status {
+    display:none!important;
+}
+
+.slider-wrapper {
+
+    .slide {
+    background: none!important;
+
+    }
+
+    .testimonial-wrapper {
+
+        width: 80%;
+        margin: 0 auto;
+
+        &__quote {
+        font-size: 3rem;
+        font-family: 'Aleo';
+        font-weight: 300;
+
+        @include respond(phone) {
+            font-size:2.5rem;
+
+          }
+        }
+
+    }
+}
+
+}

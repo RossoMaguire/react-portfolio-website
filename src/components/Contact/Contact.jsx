@@ -3,6 +3,8 @@ import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
+import Clients from './Clients';
+import Testimonials from './Testimonials';
 
 const Contact = () => {
   const { contact } = useContext(PortfolioContext);
@@ -21,11 +23,15 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--resume"
-              href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
+              href={email ? `mailto:${email}` : 'https://github.com/RossoMaguire'}
             >
               {btn || "Let's Talk"}
             </a>
           </div>
+          <Clients />
+        </Fade>
+        <Fade left duration={1000} delay={800} distance="30px">
+          <Testimonials />
         </Fade>
       </Container>
     </section>
