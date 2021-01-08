@@ -11,11 +11,12 @@ const Projects = () => {
   const LIMIT = 4;
 
   const { projects } = useContext(PortfolioContext);
+  const projectList = projects.slice(0, LIMIT);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [moreProjects, setMoreProjects] = useState(true);
-  const [list, setList] = useState(projects.slice(0, LIMIT));
+  const [list, setList] = useState(projectList);
   const [index, setIndex] = useState(LIMIT);
 
   const arrow = moreProjects ? 'fa fa-arrow-right' : 'fa fa-arrow-down';
@@ -31,8 +32,8 @@ const Projects = () => {
   }, []);
 
   useEffect(() => {
-    setList(projects.slice(0, LIMIT));
-  }, projects.slice(0, LIMIT));
+    setList(projectList);
+  }, projects);
 
   const loadMoreProjects = () => {
     // setMoreProjects((value) => !value);
