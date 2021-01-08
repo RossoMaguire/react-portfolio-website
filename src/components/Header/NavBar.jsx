@@ -30,7 +30,7 @@ const NavBar = (props) => {
               const { url, label, type } = item;
               if (
                 type === 'jumplink' &&
-                location.pathname === '/services' &&
+                location.pathname === '/services/' &&
                 label === 'Projects'
               ) {
                 return (
