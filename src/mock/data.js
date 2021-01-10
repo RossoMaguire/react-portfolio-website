@@ -7,14 +7,14 @@ export const headData = {
     lang: 'en', // e.g: en, es, fr, jp
     description:
       'This is the portfolio of Ross Maguire - Web Developer | Software Developer | SEO Specialist and Designer based in Dublin, Ireland.', // e.g: Welcome to my website
-    ogImage: '/images/rm-logo.png',
+    ogImage: '/static/images/rm-logo.png',
   },
   services: {
     title: 'Services | Ross Maguire | Front End Web Developer', // e.g: 'Name | Developer'
     lang: 'en', // e.g: en, es, fr, jp
     description:
       'Check out my Services, Ross Maguire - Web Developer | Software Developer | SEO Specialist and Designer based in Dublin, Ireland.', // e.g: Welcome to my website
-    ogImage: '/images/rm-logo.png',
+    ogImage: '/static/images/rm-logo.png',
   },
 };
 
