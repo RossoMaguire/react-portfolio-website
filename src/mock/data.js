@@ -115,6 +115,9 @@ export const projectsData = [
     label2: 'Source Code',
     languages: 'PHP | JavaScript',
   },
+];
+
+export const moreProjectsData = [
   {
     id: nanoid(),
     img: 'all-stone.png',

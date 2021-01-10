@@ -29,9 +29,10 @@ const NavBar = (props) => {
             {nav.map((item) => {
               const { url, label, type } = item;
               if (
-                type === 'jumplink' &&
-                location.pathname === '/services' &&
-                label === 'Projects'
+                (type === 'jumplink' &&
+                  location.pathname === '/services/' &&
+                  label === 'Projects') ||
+                (type === 'jumplink' && location.pathname === '/services' && label === 'Projects')
               ) {
                 return (
                   <Nav.Item>

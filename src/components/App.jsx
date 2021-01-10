@@ -17,6 +17,7 @@ import {
   aboutData,
   servicesData,
   projectsData,
+  moreProjectsData,
   contactData,
   clientData,
   testimonialData,
@@ -32,6 +33,7 @@ function App(props) {
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
+  const [moreProjects, setMoreProjects] = useState([]);
   const [services, setServices] = useState([]);
   const [contact, setContact] = useState({});
   const [clients, setClients] = useState([]);
@@ -44,6 +46,7 @@ function App(props) {
     setHero({ ...heroData });
     setAbout({ ...aboutData });
     setProjects([...projectsData]);
+    setMoreProjects([...moreProjectsData]);
     setServices([...servicesData]);
     setContact({ ...contactData });
     setClients([...clientData]);
@@ -54,7 +57,18 @@ function App(props) {
   if (location.pathname === '/') {
     return (
       <PortfolioProvider
-        value={{ nav, logo, hero, about, projects, contact, clients, testimonials, footer }}
+        value={{
+          nav,
+          logo,
+          hero,
+          about,
+          projects,
+          moreProjects,
+          contact,
+          clients,
+          testimonials,
+          footer,
+        }}
       >
         <NavBar location={location} />
         <Hero location={location} />

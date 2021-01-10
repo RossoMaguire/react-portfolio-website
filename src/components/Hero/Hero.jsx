@@ -24,20 +24,7 @@ const Header = (props) => {
     }
   }, []);
 
-  return location.pathname === '/services' ? (
-    <section id="hero" className="jumbotron services-hero">
-      <Container>
-        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-          <h1 className="hero-title">
-            {title || 'My'}
-            <span className="text-color-main">{name || ' Services'}</span>
-            <br />
-            {subtitle || 'How can I help?'}
-          </h1>
-        </Fade>
-      </Container>
-    </section>
-  ) : (
+  return location.pathname === '/' ? (
     <section id="hero" className="jumbotron home-hero">
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
@@ -56,6 +43,19 @@ const Header = (props) => {
               </Link>
             </span>
           </p>
+        </Fade>
+      </Container>
+    </section>
+  ) : (
+    <section id="hero" className="jumbotron services-hero">
+      <Container>
+        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+          <h1 className="hero-title">
+            {title || 'My'}
+            <span className="text-color-main">{name || ' Services'}</span>
+            <br />
+            {subtitle || 'How can I help?'}
+          </h1>
         </Fade>
       </Container>
     </section>
