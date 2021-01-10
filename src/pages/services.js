@@ -15,6 +15,10 @@ const ServicesPage = (props) => {
         <title>{services.title}</title>
         <html lang={services.lang || 'en'} />
         <meta name="description" content={services.description} />
+
+        <meta property="og:title" content={services.title} />
+        <meta property="og:description" content={services.description} />
+        <meta property="og:image" content={services.ogImage} />
       </Helmet>
       <App location={location} />
     </>

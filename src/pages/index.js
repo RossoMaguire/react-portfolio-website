@@ -17,6 +17,10 @@ const HomePage = (props) => {
         <title>{index.title}</title>
         <html lang={index.lang || 'en'} />
         <meta name="description" content={index.description} />
+
+        <meta property="og:title" content={index.title} />
+        <meta property="og:description" content={index.description} />
+        <meta property="og:image" content={index.ogImage} />
       </Helmet>
       <App location={location} />
     </>
