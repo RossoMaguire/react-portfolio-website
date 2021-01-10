@@ -183,7 +183,7 @@ export const servicesData = [
     paragraphOne:
       'As a qualified Software Developer and Media Specialist, I have studied and worked in many areas of this vast ever changing eco-system. If you seek someone on your team to help project manage or if you seek someone to do some ad hoc programming, bug fixing, maintenance or to join your team for a totally new position I would relish the opportunity to help. I am always learning, and I am always open to trying my hand at problems wether I have solved them before or am throwing myself in at the deep end.',
     paragraphTwo:
-      "At the end of the day, I am here to help, master my craft, grow my art, learn and to solve problems. So feel free to get in touch and let's have a chat to see what I can do for you :D",
+      "At the end of the day, I am here to help, master my craft, grow my art, learn and to solve problems. So feel free to get in touch and let's have a chat to see what I can do for you.",
     image: 'software-dev-lifecycle',
   },
 ];
