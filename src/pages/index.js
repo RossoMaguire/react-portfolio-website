@@ -5,6 +5,7 @@ import App from '../components/App';
 import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
+import OgImage from '../images/rm-logo.png';
 
 const HomePage = (props) => {
   const { index } = headData;
@@ -20,7 +21,7 @@ const HomePage = (props) => {
 
         <meta property="og:title" content={index.title} />
         <meta property="og:description" content={index.description} />
-        <meta property="og:image" content={index.ogImage} />
+        <meta property="og:image" content={OgImage} />
       </Helmet>
       <App location={location} />
     </>
