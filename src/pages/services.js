@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import '../style/main.scss';
 import { headData } from '../mock/data';
 import App from '../components/App';
-import OgImage from '../images/rm-logo.png';
 
 const ServicesPage = (props) => {
   const { services } = headData;
@@ -19,7 +18,7 @@ const ServicesPage = (props) => {
 
         <meta property="og:title" content={services.title} />
         <meta property="og:description" content={services.description} />
-        <meta property="og:image" content={OgImage} />
+        <meta property="og:image" content={services.ogImage} />
       </Helmet>
       <App location={location} />
     </>
