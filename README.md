@@ -9,7 +9,7 @@
 ⚡️ Configurable color scheme\
 ⚡️ Image optimization
 
-To view a demo example, **[click here](https://rossmaguire.com)**
+To view it in production, **[click here](https://rossmaguire.com)**
 
 ---
 
