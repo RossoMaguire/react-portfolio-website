@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
-import MoreProjects from './MoreProjects';
+// import MoreProjects from './MoreProjects';
 import ProjectImg from '../Image/ProjectImg';
 import PortfolioContext from '../../context/context';
 
@@ -13,7 +13,7 @@ const Projects = () => {
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [moreProjects, setMoreProjects] = useState(false);
+  // const [moreProjects, setMoreProjects] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -149,20 +149,6 @@ const Projects = () => {
               </>
             );
           })}
-          {!moreProjects && (
-            <>
-              <Row>
-                <span
-                  className="cta-btn text-color-main more-projects-btn"
-                  aria-hidden="true"
-                  onClick={() => setMoreProjects(true)}
-                >
-                  View more projects <i className="fa fa-arrow-right" />
-                </span>
-              </Row>
-            </>
-          )}
-          {moreProjects && <MoreProjects />}
         </div>
       </Container>
     </section>
