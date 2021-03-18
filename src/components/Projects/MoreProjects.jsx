@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useContext, useLayoutEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Row, Col } from 'react-bootstrap';
@@ -12,7 +12,7 @@ const MoreProjects = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (window.innerWidth > 769) {
       setIsDesktop(true);
       setIsMobile(false);

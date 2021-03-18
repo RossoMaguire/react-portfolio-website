@@ -1,4 +1,4 @@
-import React, { useContext, useState, useLayoutEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
@@ -14,7 +14,7 @@ const Header = (props) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (window.innerWidth > 769) {
       setIsDesktop(true);
       setIsMobile(false);
