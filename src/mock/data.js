@@ -97,12 +97,12 @@ export const projectsData = [
     title: 'Success Stories Hub',
     info: 'Micro site with interactive UI for Facebook.',
     info2:
-      'This is a page I built within the Facebook Business website which uses a dynamic grid module to display cards which then link to individual pages created on the same platform. I used an internal framework written in Hack (FB Internal Server Side language) which exposed modules I could use within the CMS platform, which uses custom XML tags to code web pages.',
+      'This is a page I built within the Facebook Business website which uses a dynamic grid module to display cards which then link to individual pages created on the same platform. I used an internal framework written in XHP & JavaScript which exposed modules I could use within the CMS platform, which uses custom XML tags to code web pages.',
     url: 'https://www.facebook.com/business/small-business/success-stories',
     label: 'See Live',
     repo: '', // if no repo, the button will not show up
     label2: '',
-    languages: 'HTML & CSS | JavaScript',
+    languages: 'HTML & CSS | XHP',
   },
   {
     id: nanoid(),
