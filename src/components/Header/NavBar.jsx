@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-scroll';
@@ -7,10 +7,10 @@ import { Link as PageLink } from 'gatsby';
 import { navData } from '../../mock/data';
 
 const NavBar = ({ location }) => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isDesktop, setIsDesktop] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     if (window.innerWidth > 769) {
       setIsDesktop(true);
       setIsMobile(false);
@@ -18,7 +18,7 @@ const NavBar = ({ location }) => {
       setIsMobile(true);
       setIsDesktop(false);
     }
-  }, []);
+  }, []); */
 
   const checkNavItem = () => {
     return navData.map((item) => {
@@ -55,7 +55,7 @@ const NavBar = ({ location }) => {
 
   return (
     <Container id="navigation-bar">
-      <Fade right={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+      <Fade bottom={false} duration={1000} delay={500} distance="30px">
         <Navbar sticky="top" collapseOnSelect expand="lg" className="justify-content-end">
           <Nav>{checkNavItem()}</Nav>
         </Navbar>

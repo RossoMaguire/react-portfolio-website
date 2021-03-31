@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Row, Col } from 'react-bootstrap';
@@ -7,10 +7,10 @@ import ProjectImg from '../Image/ProjectImg';
 import { moreProjectsData } from '../../mock/data';
 
 const MoreProjects = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isDesktop, setIsDesktop] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     if (window.innerWidth > 769) {
       setIsDesktop(true);
       setIsMobile(false);
@@ -18,14 +18,14 @@ const MoreProjects = () => {
       setIsMobile(true);
       setIsDesktop(false);
     }
-  }, []);
+  }, []); */
 
   return moreProjectsData.map((project) => {
     const { title, label, label2, info, info2, url, url2, repo, img, id, languages } = project;
     return (
       <Row key={id}>
         <Col lg={4} sm={12}>
-          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+          <Fade left duration={1000} delay={500} distance="30px">
             <div className="project-wrapper__text">
               <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
               <div className="project-wrapper__text-info">
@@ -80,7 +80,7 @@ const MoreProjects = () => {
           </Fade>
         </Col>
         <Col lg={8} sm={12}>
-          <Fade right={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+          <Fade right duration={1000} delay={1000} distance="30px">
             <div className="project-wrapper__image">
               <a
                 href={url || '#!'}

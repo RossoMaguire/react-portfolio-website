@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import ServicesImg from '../Image/ServicesImg';
 import { servicesData } from '../../mock/data';
 
 const Services = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isDesktop, setIsDesktop] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     if (window.innerWidth > 769) {
       setIsDesktop(true);
       setIsMobile(false);
@@ -16,7 +16,7 @@ const Services = () => {
       setIsMobile(true);
       setIsDesktop(false);
     }
-  }, []);
+  }, []); */
 
   return (
     <section id="services">
@@ -33,13 +33,7 @@ const Services = () => {
                 </Fade>
               </Col>
               <Col md={6} sm={12}>
-                <Fade
-                  left={isDesktop}
-                  bottom={isMobile}
-                  duration={1000}
-                  delay={1000}
-                  distance="30px"
-                >
+                <Fade left duration={1000} delay={1000} distance="30px">
                   <div className="services-wrapper__text">
                     <h3 className="services-wrapper__text-title">{title || 'Project Title'}</h3>
                     <p className="services-wrapper__info-text">{paragraphOne}</p>
@@ -51,13 +45,7 @@ const Services = () => {
           ) : (
             <Row className="services-wrapper">
               <Col md={{ span: 6, order: 'first' }} xs={{ span: 12, order: 'last' }}>
-                <Fade
-                  left={isDesktop}
-                  bottom={isMobile}
-                  duration={1000}
-                  delay={1000}
-                  distance="30px"
-                >
+                <Fade left duration={1000} delay={1000} distance="30px">
                   <div className="services-wrapper__text">
                     <h3 className="services-wrapper__text-title">{title || 'Project Title'}</h3>
                     <p className="services-wrapper__info-text">{paragraphOne}</p>
