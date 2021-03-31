@@ -7,19 +7,6 @@ import ProjectImg from '../Image/ProjectImg';
 import { moreProjectsData } from '../../mock/data';
 
 const MoreProjects = () => {
-  // const [isDesktop, setIsDesktop] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
-
-  /*   useEffect(() => {
-    if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-      setIsDesktop(false);
-    }
-  }, []); */
-
   return moreProjectsData.map((project) => {
     const { title, label, label2, info, info2, url, url2, repo, img, id, languages } = project;
     return (

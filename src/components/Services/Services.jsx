@@ -5,19 +5,6 @@ import ServicesImg from '../Image/ServicesImg';
 import { servicesData } from '../../mock/data';
 
 const Services = () => {
-  // const [isDesktop, setIsDesktop] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
-
-  /*   useEffect(() => {
-    if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-      setIsDesktop(false);
-    }
-  }, []); */
-
   return (
     <section id="services">
       <Container>

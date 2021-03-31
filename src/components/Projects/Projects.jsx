@@ -9,19 +9,7 @@ import ProjectImg from '../Image/ProjectImg';
 import { projectsData } from '../../mock/data';
 
 const Projects = () => {
-  // const [isDesktop, setIsDesktop] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
   const [moreProjects, setMoreProjects] = useState(false);
-
-  /*   useEffect(() => {
-    if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-      setIsDesktop(false);
-    }
-  }, []); */
 
   return (
     <section id="projects">

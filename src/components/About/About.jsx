@@ -8,19 +8,6 @@ import { aboutData } from '../../mock/data';
 const About = () => {
   const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = aboutData;
 
-  // const [isDesktop, setIsDesktop] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
-
-  /*   useEffect(() => {
-    if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-      setIsDesktop(false);
-    }
-  }, []); */
-
   return (
     <section id="about">
       <Container>
