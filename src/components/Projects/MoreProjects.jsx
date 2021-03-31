@@ -1,14 +1,12 @@
 /* eslint-disable react/prop-types */
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Row, Col } from 'react-bootstrap';
 import ProjectImg from '../Image/ProjectImg';
-import PortfolioContext from '../../context/context';
+import { moreProjectsData } from '../../mock/data';
 
 const MoreProjects = () => {
-  const { moreProjects } = useContext(PortfolioContext);
-
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -22,7 +20,7 @@ const MoreProjects = () => {
     }
   }, []);
 
-  return moreProjects.map((project) => {
+  return moreProjectsData.map((project) => {
     const { title, label, label2, info, info2, url, url2, repo, img, id, languages } = project;
     return (
       <Row key={id}>

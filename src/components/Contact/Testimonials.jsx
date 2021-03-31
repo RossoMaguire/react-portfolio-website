@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
-import PortfolioContext from '../../context/context';
+import { testimonialData } from '../../mock/data';
 
 const Testimonials = () => {
-  const { testimonials } = useContext(PortfolioContext);
   return (
     <Carousel showArrows showIndicators showThumbs={false}>
-      {testimonials.map((testimonial) => {
+      {testimonialData.map((testimonial) => {
         const { company, quote } = testimonial;
         return (
           <div className="testimonial-wrapper">

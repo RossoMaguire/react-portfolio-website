@@ -1,13 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import '../style/main.scss';
+import NavBar from '../components/Header/NavBar';
+import SecondaryHero from '../components/Hero/SecondaryHero';
+import Services from '../components/Services/Services';
+import Contact from '../components/Contact/Contact';
+import Footer from '../components/Footer/Footer';
 import { headData } from '../mock/data';
-import App from '../components/App';
+import '../style/main.scss';
 
-const ServicesPage = (props) => {
+const ServicesPage = () => {
   const { services } = headData;
-  const { location } = props;
   return (
     <>
       <Helmet>
@@ -20,13 +22,13 @@ const ServicesPage = (props) => {
         <meta property="og:description" content={services.description} />
         <meta property="og:image" content={services.ogImage} />
       </Helmet>
-      <App location={location} />
+      <NavBar location="services" />
+      <SecondaryHero title="My Services" subtitle="How can I help?" />
+      <Services />
+      <Contact />
+      <Footer />
     </>
   );
-};
-
-ServicesPage.propTypes = {
-  location: PropTypes.string,
 };
 
 export default ServicesPage;

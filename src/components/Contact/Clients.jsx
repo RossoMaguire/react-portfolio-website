@@ -1,14 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import PortfolioContext from '../../context/context';
 import ClientImg from '../Image/ClientImg';
+import { clientData } from '../../mock/data';
 
 const Clients = () => {
-  const { clients } = useContext(PortfolioContext);
-
   return (
     <div className="clients-wrapper">
-      {clients.map((client) => {
+      {clientData.map((client) => {
         return (
           <Row>
             <Col md={4} sm={12}>

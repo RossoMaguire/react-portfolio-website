@@ -7,7 +7,7 @@ module.exports = {
   },
   rules: {
     'import/no-extraneous-dependencies': 'off',
-    'prettier/prettier': 'error',
+    'prettier/prettier': ['error', { singleQuote: true }],
     'no-console': 'warn',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-filename-extension': 'off', // disable if necessary

@@ -1,13 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import ServicesImg from '../Image/ServicesImg';
-import PortfolioContext from '../../context/context';
-import Emoji from '../Emoji/Emoji';
+import { servicesData } from '../../mock/data';
 
 const Services = () => {
-  const { services } = useContext(PortfolioContext);
-
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -24,8 +21,8 @@ const Services = () => {
   return (
     <section id="services">
       <Container>
-        {services.map((service, index) => {
-          const { title, paragraphOne, paragraphTwo, image, emoji } = service;
+        {servicesData.map((service, index) => {
+          const { title, paragraphOne, paragraphTwo, image } = service;
           return index % 2 === 0 ? (
             <Row className="services-wrapper">
               <Col md={6} sm={12}>
@@ -47,7 +44,6 @@ const Services = () => {
                     <h3 className="services-wrapper__text-title">{title || 'Project Title'}</h3>
                     <p className="services-wrapper__info-text">{paragraphOne}</p>
                     <p className="services-wrapper__info-text">{paragraphTwo}</p>
-                    {emoji && <Emoji symbol={emoji} />}
                   </div>
                 </Fade>
               </Col>

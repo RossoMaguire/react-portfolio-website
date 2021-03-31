@@ -34,7 +34,7 @@ export const navData = [
   {
     url: '/services',
     label: 'Services',
-    type: 'external',
+    type: 'page',
   },
   {
     url: 'contact',
@@ -45,10 +45,10 @@ export const navData = [
 
 // HERO DATA
 export const heroData = {
-  title: '',
-  name: '',
-  subtitle: '',
-  cta: '',
+  title: 'Hi, my name is ',
+  name: 'Ross',
+  subtitle: "I'm a Frontend Web Developer.",
+  cta: 'Know more',
 };
 
 // ABOUT DATA
