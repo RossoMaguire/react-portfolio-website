@@ -12,7 +12,7 @@ const SecondaryHero = ({ title, subtitle }) => {
         <Fade left duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
             {splitTitle[0]}
-            <span className="text-color-main">{splitTitle[1]}</span>
+            <span className="text-color-main">{` ${splitTitle[1]}`}</span>
             <br />
             {subtitle}
           </h1>

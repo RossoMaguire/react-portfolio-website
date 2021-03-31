@@ -6,20 +6,21 @@ import { Link } from 'react-scroll';
 import { Link as PageLink } from 'gatsby';
 import { navData } from '../../mock/data';
 
-const NavBar = ({ location }) => {
+const NavBarMenu = ({ location }) => {
   const checkNavItems = navData.map((item) => {
-    const { url, label, type } = item;
+    const { type, url, label } = item;
+    let itemToReturn;
+
     if (type === 'jumplink' && location === 'services' && label === 'Projects') {
-      return (
+      itemToReturn = (
         <Nav.Item>
           <PageLink className="cta-btn text-color-main" to="/#projects">
             {label}
           </PageLink>
         </Nav.Item>
       );
-    }
-    if (type === 'jumplink') {
-      return (
+    } else if (type === 'jumplink') {
+      itemToReturn = (
         <Nav.Item>
           <span className="cta-btn text-color-main">
             <Link to={url} smooth duration={1000}>
@@ -28,15 +29,17 @@ const NavBar = ({ location }) => {
           </span>
         </Nav.Item>
       );
+    } else {
+      itemToReturn = (
+        <Nav.Item>
+          <PageLink className="cta-btn text-color-main" to={url}>
+            {label}
+          </PageLink>
+        </Nav.Item>
+      );
     }
 
-    return (
-      <Nav.Item>
-        <PageLink className="cta-btn text-color-main" to={url}>
-          {label}
-        </PageLink>
-      </Nav.Item>
-    );
+    return itemToReturn;
   });
 
   return (
@@ -50,4 +53,4 @@ const NavBar = ({ location }) => {
   );
 };
 
-export default NavBar;
+export default NavBarMenu;

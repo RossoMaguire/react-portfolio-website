@@ -1,12 +1,13 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'gatsby';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import { aboutData } from '../../mock/data';
 
 const About = () => {
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = aboutData;
+  const { img, paragraphOne, paragraphTwo, paragraphThree } = aboutData;
 
   return (
     <section id="about">
@@ -26,18 +27,11 @@ const About = () => {
                 <p className="about-wrapper__info-text">{paragraphOne}</p>
                 <p className="about-wrapper__info-text">{paragraphTwo}</p>
                 <p className="about-wrapper__info-text">{paragraphThree}</p>
-                {resume && (
-                  <span className="d-flex mt-3">
-                    <a
-                      target="_self"
-                      rel="noopener noreferrer"
-                      className="cta-btn cta-btn--resume"
-                      href={resume}
-                    >
-                      See my services
-                    </a>
-                  </span>
-                )}
+                <span className="d-flex mt-3">
+                  <Link to="/services" className="cta-btn cta-btn--resume">
+                    See my services
+                  </Link>
+                </span>
               </div>
             </Fade>
           </Col>

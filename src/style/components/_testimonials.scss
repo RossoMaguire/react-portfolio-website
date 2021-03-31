@@ -25,6 +25,12 @@ margin-top: 10rem;
         font-style: normal;
         font-size:40px;
         border:none!important; 
+
+
+        @include respond(phone) {
+            font-size:25px;
+
+          }
     }
 
 }
@@ -37,7 +43,14 @@ margin-top: 10rem;
         content: "\f100"!important;
         font-style: normal;
         font-size:40px;
-        border:none!important; 
+        border:none!important;
+        
+        
+        @include respond(phone) {
+            font-size:25px;
+
+          }
+
     }
 }
 
@@ -63,7 +76,7 @@ margin-top: 10rem;
         font-weight: 300;
 
         @include respond(phone) {
-            font-size:2.5rem;
+            font-size:1.8rem;
 
           }
         }

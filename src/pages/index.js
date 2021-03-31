@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import NavBar from '../components/Header/NavBar';
+import NavBarMenu from '../components/Header/NavBarMenu';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
@@ -26,7 +26,7 @@ const HomePage = () => {
         <meta property="og:description" content={index.description} />
         <meta property="og:image" content={index.ogImage} />
       </Helmet>
-      <NavBar location="home" />
+      <NavBarMenu location="home" />
       <Hero />
       <About />
       <Projects />
