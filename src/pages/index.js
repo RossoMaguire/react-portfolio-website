@@ -32,7 +32,6 @@ const HomePage = () => {
       <Projects />
       <Contact />
       <Footer />
-      );
     </>
   );
 };
