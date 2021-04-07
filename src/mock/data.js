@@ -55,7 +55,7 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.jpg',
   paragraphOne:
-    'Hey, thanks for visiting! I am Ross and I currently work as a Web Developer at Facebook. I built this website using Gatsby - an open source React based framework for building static websites.',
+    'Hey, thanks for visiting! I am Ross and I currently work as a Software Engineer at WP Engine. I built this website using Gatsby - an open source React based framework for building static websites.',
   paragraphTwo:
     'With over 6 years experience writing code in various languages (HTML & CSS, PHP, JavaScript, C#..) new code excites me and I tend to get my teeth sunk in easily, adapting to whatever the problem requires. With that in mind please feel free to have a look at some of my projects below and on GitHub where you can see the types of things I am experimenting with right now, the types of websites I have built in the past, and what projects I am working on in my part-time Software Development HDip at Dublin Business School. ',
   paragraphThree:
