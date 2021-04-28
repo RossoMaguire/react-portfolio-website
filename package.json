@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "wpe-build": "",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
@@ -14,6 +15,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.4",
+    "@wpengine/headless": "^0.6.3",
     "bootstrap": "^4.5.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.23.7",
