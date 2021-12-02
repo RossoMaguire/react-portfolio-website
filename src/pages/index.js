@@ -8,11 +8,17 @@ import Projects from '../components/Projects/Projects';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import { headData } from '../mock/data';
+import useHasMounted from '../hooks/useHasMounted';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
 const HomePage = () => {
   const { index } = headData;
+
+  const hasMounted = useHasMounted();
+  if (!hasMounted) {
+    return null;
+  }
 
   return (
     <>

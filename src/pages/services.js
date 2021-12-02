@@ -6,10 +6,17 @@ import Services from '../components/Services/Services';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import { headData } from '../mock/data';
+import useHasMounted from '../hooks/useHasMounted';
 import '../style/main.scss';
 
 const ServicesPage = () => {
   const { services } = headData;
+
+  const hasMounted = useHasMounted();
+  if (!hasMounted) {
+    return null;
+  }
+
   return (
     <>
       <Helmet>
