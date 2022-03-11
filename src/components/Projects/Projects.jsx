@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -11,8 +11,16 @@ import { projectsData } from '../../mock/data';
 const Projects = () => {
   const [moreProjects, setMoreProjects] = useState(false);
 
+  const projectsRef = useRef(null);
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+
+    if (queryParams.has('section')) projectsRef.current.scrollIntoView();
+  }, []);
+
   return (
-    <section id="projects">
+    <section id="projects" ref={projectsRef}>
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />

@@ -14,7 +14,7 @@ const NavBarMenu = ({ location }) => {
     if (type === 'jumplink' && location === 'services' && label === 'Projects') {
       itemToReturn = (
         <Nav.Item>
-          <PageLink className="cta-btn text-color-main" to="/#projects">
+          <PageLink className="cta-btn text-color-main" to="/?section=projects">
             {label}
           </PageLink>
         </Nav.Item>
