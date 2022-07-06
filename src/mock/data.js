@@ -70,7 +70,7 @@ export const projectsData = [
     title: 'Ecommerce Solution',
     info: "Feature created inside WP Engine's customer Portal.",
     info2:
-      'This is a React & TypeScript UI with nested components created within a Ruby on Rails application using the companys Design System via Storybook. The features were designed by our UX team and it was my job to create the UI in React and connect the user action of installing each feature by hitting the API of a service we built in Go. I then handled the various application state and events that occured as well as writing integration tests in both Jest and Rspec to cover all edge cases and future proof development. ',
+      "This is a React & TypeScript UI with nested components created within a Ruby on Rails application using the company's Design System via Storybook. The features were designed by our UX team and it was my job to create the UI in React and connect the user action of installing each feature by hitting the API of a service we built in Go. I then handled the various application state and events that occured as well as writing integration tests in both Jest and Rspec to cover all edge cases and future proof development. ",
     url: 'https://wpengine.com/support/ecommerce-solution/',
     label: 'Read more',
     repo: '', // if no repo, the button will not show up
