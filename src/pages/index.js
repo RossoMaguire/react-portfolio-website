@@ -1,44 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import NavBarMenu from '../components/Header/NavBarMenu';
+import HeaderFooter from '../layouts/HeaderFooter';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
-import Contact from '../components/Contact/Contact';
-import Footer from '../components/Footer/Footer';
-import { headData } from '../mock/data';
-import useHasMounted from '../hooks/useHasMounted';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../style/main.scss';
 
 const HomePage = () => {
-  const { index } = headData;
-
-  const hasMounted = useHasMounted();
-  if (!hasMounted) {
-    return null;
-  }
-
   return (
-    <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{index.title}</title>
-        <html lang={index.lang || 'en'} />
-        <meta name="description" content={index.description} />
-
-        <meta property="og:title" content={index.title} />
-        <meta property="og:description" content={index.description} />
-        <meta property="og:image" content={index.ogImage} />
-      </Helmet>
-      <NavBarMenu location="home" />
+    <HeaderFooter>
       <Hero />
       <About />
       <Projects />
-      <Contact />
-      <Footer />
-    </>
+    </HeaderFooter>
   );
 };
 

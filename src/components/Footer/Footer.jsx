@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
-import { footerData } from '../../mock/data';
+import { footerData } from '../../content/data';
 
 const Footer = () => {
   const { networks } = footerData;

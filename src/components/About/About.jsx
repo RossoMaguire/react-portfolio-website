@@ -3,8 +3,8 @@ import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'gatsby';
 import Title from '../Title/Title';
-import AboutImg from '../Image/AboutImg';
-import { aboutData } from '../../mock/data';
+import AboutThumb from '../Image/AboutThumb';
+import { aboutData } from '../../content/data';
 
 const About = () => {
   const { img, paragraphOne, paragraphTwo, paragraphThree } = aboutData;
@@ -17,7 +17,7 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={img} />
+                <AboutThumb alt="profile picture" filename={img} />
               </div>
             </Fade>
           </Col>

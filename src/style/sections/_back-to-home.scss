@@ -1,0 +1,24 @@
+#back-to-home {
+  background-image: linear-gradient(101deg, #04b6b0 0%, #05ccac 100%);
+  padding: 0;
+
+  .back-to-home {
+    width: 200px;
+    margin: 0;
+    padding: 1rem 1rem;
+    background-color: white;
+    cursor: pointer;
+
+    a {
+      color: #333333;
+    }
+  }
+
+  @include respond(phone) {
+    display: none;
+  }
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}

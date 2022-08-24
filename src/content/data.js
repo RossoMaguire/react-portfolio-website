@@ -57,7 +57,7 @@ export const aboutData = {
   paragraphOne:
     'Hey, thanks for visiting! I am Ross and I currently work as a Software Engineer at WP Engine. I built this website using Gatsby - an open source React based framework for building static websites.',
   paragraphTwo:
-    'With over 6 years experience writing code in various languages new code excites me and I tend to get my teeth sunk in easily, adapting to whatever the problem requires. Right now I am mostly working with React (incl HTML & CSS), Ruby on Rails, PHP, Golang, C# and WordPress. With that in mind please feel free to have a look at some of my projects below and on GitHub where you can see the types of things I am experimenting with right now and the types of websites I have built in the past.',
+    'With over 6 years experience writing code in various languages new code excites me and I tend to get my teeth sunk in easily, adapting to whatever the problem requires. Right now I am mostly working with React & TypeScript (incl HTML & CSS), Node, Ruby on Rails, PHP, Go, and WordPress. With that in mind please feel free to have a look at some of my projects below and on GitHub where you can see the types of things I am experimenting with right now and the types of websites I have built in the past.',
   paragraphThree:
     'If you are here hoping to hire a Web Developer and want to know more, check out the services I provide to see how I can help.',
 };

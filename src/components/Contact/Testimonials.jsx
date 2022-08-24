@@ -1,7 +1,6 @@
 import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
-import { testimonialData } from '../../mock/data';
+import { testimonialData } from '../../content/data';
 
 const Testimonials = () => {
   return (
@@ -9,7 +8,7 @@ const Testimonials = () => {
       {testimonialData.map((testimonial) => {
         const { company, quote } = testimonial;
         return (
-          <div className="testimonial-wrapper">
+          <div className="testimonial-wrapper" key={`testimonial-${company}`}>
             <blockquote className="testimonial-wrapper__quote">{quote}</blockquote>
             <p className="testimonial-wrapper__company">{company}</p>
           </div>
