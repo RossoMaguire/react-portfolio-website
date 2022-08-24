@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { useLocation } from '@reach/router';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import NavBarMenu from '../components/Header/NavBarMenu';
@@ -11,7 +12,9 @@ import '../style/main.scss';
 
 export default function HeaderFooter({ children }) {
   const { index, services } = headData;
-  const isServicesPage = window.location.pathname === '/services';
+
+  const path = useLocation();
+  const isServicesPage = path.pathname === '/services';
 
   const hasMounted = useHasMounted();
   if (!hasMounted) {
@@ -36,9 +39,9 @@ export default function HeaderFooter({ children }) {
         />
         <meta property="og:image" content={isServicesPage ? services.ogImage : index.ogImage} />
       </Helmet>
-      <NavBarMenu location={window.location.pathname} />
+      <NavBarMenu location={path.pathname} />
       {children}
-      <Contact location={window.location.pathname} />
+      <Contact location={path.pathname} />
       <Footer />
     </>
   );
