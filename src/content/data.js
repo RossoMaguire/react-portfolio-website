@@ -66,9 +66,24 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'blueprint.png',
+    title: 'Headless Ecommerce Blueprint',
+    info:
+      'Next.js Ecommerce template complete with BigCommerce API plugin for the decoupled WordPress backend.',
+    info2:
+      "This is a Next.js frontend template that is deployable via WP Engine's Customer Portal and contains a custom plugin for use with a decoupled WordPress backend which allows the user to sync products from a BigCommerce account using the REST API.",
+    url:
+      'https://developers.wpengine.com/docs/atlas-commerce-connector/tutorial/performing-product-sync',
+    label: 'Read more',
+    repo: 'https://github.com/wpengine/atlas-commerce-blueprint', // if no repo, the button will not show up
+    label2: 'Source Code',
+    languages: 'Next.js | PHP',
+  },
+  {
+    id: nanoid(),
     img: 'ecomm-wpengine.png',
     title: 'Ecommerce Solution',
-    info: "Feature created inside WP Engine's customer Portal.",
+    info: "Feature created inside WP Engine's Customer Portal.",
     info2:
       "This is a React & TypeScript UI with nested components created within a Ruby on Rails application using the company's Design System via Storybook. The features were designed by our UX team and it was my job to create the UI in React and connect the user action of installing each feature by hitting the API of a service we built in Go. I then handled the various application state and events that occured as well as writing integration tests in both Jest and Rspec to cover all edge cases and future proof development. ",
     url: 'https://wpengine.com/support/ecommerce-solution/',
