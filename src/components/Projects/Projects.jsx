@@ -22,7 +22,19 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {projectsData.map((project) => {
-            const { title, label, label2, info, info2, url, url2, repo, img, id } = project;
+            const {
+              title,
+              label,
+              label2,
+              info,
+              info2,
+              url,
+              url2,
+              repo,
+              img,
+              id,
+              languages,
+            } = project;
             return (
               <Row key={`project-${id}`}>
                 <Col lg={4} sm={12}>
@@ -35,6 +47,7 @@ const Projects = () => {
                     url2={url2}
                     label2={label2}
                     repo={repo}
+                    languages={languages}
                   />
                 </Col>
                 <Col lg={8} sm={12}>

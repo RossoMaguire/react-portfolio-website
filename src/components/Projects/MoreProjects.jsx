@@ -7,7 +7,7 @@ import { moreProjectsData } from '../../content/data';
 
 const MoreProjects = () => {
   return moreProjectsData.map((project) => {
-    const { title, label, label2, info, info2, url, url2, repo, img, id } = project;
+    const { title, label, label2, info, info2, url, url2, repo, img, id, languages } = project;
     return (
       <Row key={`more-project-${id}`}>
         <Col lg={4} sm={12}>
@@ -20,6 +20,7 @@ const MoreProjects = () => {
             url2={url2}
             label2={label2}
             repo={repo}
+            languages={languages}
           />
         </Col>
         <Col lg={8} sm={12}>
